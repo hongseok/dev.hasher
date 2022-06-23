@@ -29,9 +29,7 @@ function getMobileOperatingSystem() {
     <script>
 function DetectAndServe(){
     let os = getMobileOperatingSystem();
-    if (os == "Android") {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=myReferrerValue"; 
-    } else if (os == "iOS") {
+    if (os == "iOS") {
         window.location.href = "https://apps.apple.com/us/app/live-text-hasher/id1615513935";
     } else {
         window.location.href = "https://hasher.porthej.com/nopage.html";
