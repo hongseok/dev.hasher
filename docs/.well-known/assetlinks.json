@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ncorp.businessinsight.deviceinfo",
+    "sha256_cert_fingerprints":
+    ["93:53:A7:DC:E8:2D:0A:A4:E0:7E:A9:BF:64:58:5E:19:9D:B2:B9:93:FA:99:06:4E:9B:FF:91:64:20:5F:E8:02",
+    "03:76:B2:EC:6C:78:71:09:EC:CE:24:48:A9:D1:C2:28:79:5C:A8:5B:01:2B:B0:5A:85:99:99:EF:5C:EA:B8:88"]
+  }
+}]
