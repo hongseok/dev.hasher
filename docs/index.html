@@ -48,8 +48,9 @@ function DetectAndServe(){
             window.location.href = "https://apps.apple.com/us/app/live-text-hasher/id1615513935";
         } else if (os == "Android") {
 //            window.location,href = "market://details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
-           window.location.href = "https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
-//               window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
+//            window.location.href = "https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
+//            window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
+            window.location.replace("https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID);
         } else {
             window.location.href = "https://hasher.porthej.com/nopage.html?gfa_click_id=" + clickID;
         }
