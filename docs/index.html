@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-itunes-app" content="app-id=1615513935, app-argument=cid%3dappbanner">
     <!--<meta http-equiv="refresh" content="0; url=https://apps.apple.com/us/app/live-text-hasher/id1615513935"></meta>-->
-    <script>
+    
+<script>
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -24,29 +25,33 @@ function getMobileOperatingSystem() {
     }
 
     return "etc";
-}</script>
+}
+</script>
     
-    <script>
+<script>
 function DetectAndServe(){
-  let os = getMobileOperatingSystem();
+    let os = getMobileOperatingSystem();
 
-  if (os == "iOS") {
-    document.getElementById("container").innerText = "앱이 설치되지 않았습니다. 5초 후 앱스토어로 이동합니다."
-  } else if (os == "Android") {
-    document.getElementById("container").innerText = "앱이 설치되지 않았습니다. 5초 후 구글 플레이로 이동합니다."
-  } else {
-    document.getElementById("container").innerText = "5초 후 앱 설치 링크 페이지로 이동합니다."
-  }
+    const urlParams = new URLSearchParams(window.location.search);
+    const clickID = urlParams.get('gfa_click_id');
 
-  setTimeout(function () {
     if (os == "iOS") {
-        window.location.href = "https://apps.apple.com/us/app/live-text-hasher/id1615513935";
+        document.getElementById("container").innerText = "앱이 설치되지 않았습니다. 5초 후 앱스토어로 이동합니다."
     } else if (os == "Android") {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo";
+        document.getElementById("container").innerText = "앱이 설치되지 않았습니다. 5초 후 구글 플레이로 이동합니다."
     } else {
-        window.location.href = "https://hasher.porthej.com/nopage.html";
+        document.getElementById("container").innerText = "5초 후 앱 설치 링크 페이지로 이동합니다."
     }
-  }, 5000); //will call the function after 2 secs.
+
+    setTimeout(function () {
+        if (os == "iOS") {
+            window.location.href = "https://apps.apple.com/us/app/live-text-hasher/id1615513935";
+        } else if (os == "Android") {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.ncorp.businessinsight.deviceinfo&referrer=" + clickID;
+        } else {
+            window.location.href = "https://hasher.porthej.com/nopage.html?gfa_click_id=" + clickID;
+        }
+    }, 5000); //will call the function after 2 secs.
 }
 </script>
     
